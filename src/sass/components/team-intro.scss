@@ -1,0 +1,98 @@
+.team-intro {
+	padding: 3rem 1rem;
+
+	&__header {
+		display: flex;
+		justify-content: center;
+		margin: 0 auto 2rem;
+		max-width: $max-width;
+		width: 100%;
+
+		.team-title,
+		.team-text {
+			max-width: 800px;
+			padding: 1.5rem;
+		}
+
+		.team-title {
+			font-weight: 300;
+			font-size: 2rem;
+			margin: 0;
+			width: 30%;
+		}
+
+		.team-text {
+			font-size: 1.25rem;
+			width: 70%;
+
+			p {
+				margin: 0 0 1rem;
+			}
+		}
+	}
+
+	&__people {
+		display: grid;
+		grid-gap: 1rem;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		margin: 0 auto 2rem;
+		max-width: $max-width;
+		width: 100%;
+
+		.team-card {
+			cursor: pointer;
+			height: 300px;
+			overflow: hidden;
+			position: relative;
+
+			&__image {
+				background: $primary-color;
+				height: 100%;
+				position: absolute;
+				width: 100%;
+				z-index: 1;
+
+				img {
+					display: block;
+					filter: grayscale(1);
+					height: 100%;
+					object-fit: cover;
+					opacity: 0.85;
+					width: 100%;
+				}
+			}
+
+			&__content {
+				background: rgba($secondary-color, 0.9);
+				height: 100%;
+				padding: 2rem;
+				position: relative;
+				transform: translateX(-100%);
+				transition: all 0.4s ease-in-out;
+				width: 100%;
+				z-index: 2;
+
+				.person-name,
+				.person-title {
+					color: $accent-color;
+					margin: 0 0 1rem;
+				}
+
+				.person-name {
+					font-size: 1.5rem;
+					font-weight: normal;
+				}
+				.person-title {
+					font-size: 1.25rem;
+					font-weight: 300;
+				}
+			}
+
+			&:hover {
+				.team-card__content {
+					transform: translateX(0);
+				}
+			}
+		}
+	}
+}

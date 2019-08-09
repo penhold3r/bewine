@@ -1,0 +1,50 @@
+.hero {
+	height: 100vh;
+	position: relative;
+
+	.slider {
+		position: relative;
+		height: inherit;
+
+		.slide {
+			background: linear-gradient(45deg, $primary-color, $secondary-color);
+			position: relative;
+			height: inherit;
+			display: flex;
+
+			&__image {
+				display: block;
+				height: 100%;
+				left: 0;
+				object-fit: cover;
+				opacity: 0.5;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				z-index: 1;
+			}
+
+			&__content {
+				color: #fff;
+				position: relative;
+				margin: auto;
+				max-width: $max-width;
+				width: 100%;
+				padding: 1rem;
+				z-index: 2;
+
+				.slide-title {
+					font-size: 3rem;
+					font-weight: 300;
+					margin: 0 0 1rem;
+				}
+
+				.slide-text {
+					margin: 0;
+					max-width: 450px;
+					font-size: 1.5rem;
+				}
+			}
+		}
+	}
+}

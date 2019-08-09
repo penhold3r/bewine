@@ -1,0 +1,54 @@
+.contact-intro {
+	padding: 3rem 1rem;
+
+	&__content {
+		display: grid;
+		grid-gap: 2rem;
+		grid-template-columns: 1fr 1fr;
+		max-width: $max-width;
+		width: 100%;
+		margin: 0 auto;
+
+		.contact-text {
+			.contact-title {
+				font-weight: 300;
+				font-size: 2rem;
+				margin: 0 0 1rem;
+			}
+
+			.contact-data {
+				font-size: 1.25rem;
+				margin: 0 0 1rem;
+			}
+		}
+
+		.contact-form {
+			.form-block {
+				position: relative;
+				margin-bottom: 1rem;
+
+				label {
+					position: absolute;
+					z-index: 0;
+				}
+
+				.form-field {
+					border: 1px solid #999;
+					font-size: 1.25rem;
+					font-family: 'Montserrat', sans-serif;
+					padding: 0.5rem 1rem;
+					width: 100%;
+
+					&.textarea {
+						height: 6rem;
+						resize: vertical;
+					}
+
+					&:focus {
+						border: 1px solid $primary-color;
+					}
+				}
+			}
+		}
+	}
+}

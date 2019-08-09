@@ -1,0 +1,80 @@
+.projects-intro {
+	padding: 3rem 1rem;
+
+	.projects-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		margin: 0 auto 2rem;
+		max-width: $max-width;
+		width: 100%;
+
+		.project-card {
+			background: #ddd;
+			height: 300px;
+			position: relative;
+			overflow: hidden;
+			text-decoration: none;
+
+			.project-image {
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				z-index: 1;
+
+				img {
+					display: block;
+					object-fit: cover;
+					height: 100%;
+					width: 100%;
+				}
+			}
+
+			.project-details {
+				background: rgba($primary-color, 0.9);
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+				padding: 2.5rem;
+				position: absolute;
+				transform: translateX(-100%);
+				transition: all 0.4s ease-in-out;
+				width: 100%;
+				z-index: 2;
+
+				.project-title {
+					font-weight: normal;
+					font-size: 1.5rem;
+					color: $accent-color;
+					line-height: 1.1;
+					margin: 0 0 1rem;
+				}
+
+				.categories {
+					small {
+						border: 1px solid $accent-color;
+						color: $accent-color;
+						display: inline-block;
+						margin: 0 0.75rem 0.75rem 0;
+						padding: 0.25rem 0.75rem;
+						text-transform: uppercase;
+						font-weight: 300;
+						letter-spacing: 0.05rem;
+					}
+				}
+
+				.goto {
+					color: $accent-color;
+					font-size: 3rem;
+					margin: auto 0 0 auto;
+					line-height: 2rem;
+				}
+			}
+
+			&:hover {
+				.project-details {
+					transform: translateX(0);
+				}
+			}
+		}
+	}
+}

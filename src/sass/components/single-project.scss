@@ -1,0 +1,57 @@
+.single-project {
+	padding: 0 0 2rem;
+
+	.project-header {
+		background: $secondary-color;
+		display: flex;
+		height: 300px;
+		position: relative;
+		overflow: hidden;
+
+		&__image {
+			display: block;
+			filter: blur(10px);
+			transform: scale(1.2);
+			left: 0;
+			top: 0;
+			height: 100%;
+			object-fit: cover;
+			opacity: 0.5;
+			position: absolute;
+			width: 100%;
+			z-index: 1;
+		}
+
+		&__title {
+			color: #fff;
+			font-size: 2.5rem;
+			margin: auto;
+			position: relative;
+			text-transform: uppercase;
+			z-index: 2;
+			max-width: $max-width;
+		}
+	}
+
+	.project-content {
+		width: 100%;
+		margin: 2rem auto;
+		max-width: $max-width;
+
+		&__description {
+			padding: 2rem 0;
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+
+		&__images {
+			max-width: 1000px;
+			margin: 0 auto;
+
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}
